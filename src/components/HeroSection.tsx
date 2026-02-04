@@ -23,8 +23,8 @@ export function HeroSection() {
         
         <div className="flex justify-center">
           <div className="relative">
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1701163802894-99fa45f1c83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWtldXAlMjBhcnRpc3QlMjB3b21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MDIwNzYwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            <img
+              src="/images/Foto_perfil.jpeg"
               alt="Silvia Junquera"
               className="rounded-2xl shadow-[0_0_30px_rgba(255,255,255,0.6)] w-full max-w-md border border-[#d199cc]"
             />

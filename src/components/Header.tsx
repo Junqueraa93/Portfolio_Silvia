@@ -13,7 +13,7 @@ export function Header() {
           <li>
             <button
               onClick={() => scrollToSection('inicio')}
-              className="hover:opacity-70 transition-opacity px-4 py-2"
+              className="hover:opacity-70 transition-opacity px-1 py-2"
             >
               Inicio
             </button>
@@ -21,7 +21,7 @@ export function Header() {
           <li>
             <button
               onClick={() => scrollToSection('estudios')}
-              className="hover:opacity-70 transition-opacity px-4 py-2"
+              className="hover:opacity-70 transition-opacity px-1 py-2"
             >
               Estudios
             </button>
@@ -29,7 +29,7 @@ export function Header() {
           <li>
             <button
               onClick={() => scrollToSection('proyectos')}
-              className="hover:opacity-70 transition-opacity px-4 py-2"
+              className="hover:opacity-70 transition-opacity px-1 py-2"
             >
               Proyectos
             </button>
@@ -37,7 +37,7 @@ export function Header() {
           <li>
             <button
               onClick={() => scrollToSection('experiencia')}
-              className="hover:opacity-70 transition-opacity px-4 py-2"
+              className="hover:opacity-70 transition-opacity px-1 py-2"
             >
               Experiencia
             </button>

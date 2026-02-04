@@ -3,19 +3,16 @@ export function EducationSection() {
     {
       title: 'Certificado oficial de tratamientos estéticos de nivel III',
       year: '2018',
-      description: 'Formación completa en tratamientos estéticos profesionales, adquiriendo conocimientos fundamentales en el cuidado de la piel, técnicas de maquillaje básico y tratamientos faciales y corporales. Este certificado oficial me proporcionó las bases técnicas y conocimientos dermatológicos esenciales para el desarrollo de mi carrera profesional.'
     },
     {
       title: 'Diplomatura de maquillaje y peluquería',
       institution: 'Instituto del Cine de Madrid',
       year: '2023-2025',
-      description: 'Formación especializada en maquillaje y peluquería para medios audiovisuales, abarcando técnicas avanzadas de maquillaje de cámara, diseño de peinados de época, caracterización básica, y metodología de trabajo en sets de rodaje. Esta diplomatura me permitió desarrollar habilidades específicas para la industria cinematográfica y televisiva.'
     },
     {
       title: 'Especialización en caracterización y FX',
       institution: 'Instituto del Cine de Madrid',
       year: '2025-2026',
-      description: 'Especialización avanzada en técnicas de efectos especiales de maquillaje, posticería, prótesis faciales y corporales, envejecimiento, heridas y quemaduras realistas. Esta formación me ha capacitado para crear personajes complejos y efectos especiales profesionales para producciones audiovisuales de alto nivel.'
     }
   ];
 

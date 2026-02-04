@@ -17,7 +17,6 @@ export function HeroSection() {
             Maquilladora y peluquera profesional con más de 3 años de experiencia en la industria audiovisual y del espectáculo. Mi especialización en caracterización, efectos especiales y posticería me permite crear personajes complejos y realistas, siempre adaptándome a las necesidades narrativas y artísticas de cada proyecto.
             <br /><br />
             Mi formación me permite transformar ideas y conceptos creativos en resultados reales. He tenido la oportunidad de trabajar en distintos ámbitos, como cine, televisión, teatro musical y eventos especiales, siempre cuidando cada detalle y poniendo pasión en cada proyecto para ofrecer un trabajo de calidad.            <br /><br />
-            Mi enfoque se centra en la colaboración con cada uno de los departamentos para garantizar que cada look contribuya significativamente a la historia y al desarrollo de personajes, respetando siempre los plazos de producción y las exigencias del medio audiovisual.
           </p>
         </div>
         

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { ProjectCard } from './ProjectCard';
 import { ProjectModal } from './ProjectModal';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export interface Project {
   id: number;
@@ -9,7 +8,6 @@ export interface Project {
   date: string;
   shortDescription: string;
   fullDescription: string;
-  duration: string;
   mainImage: string;
   images: string[];
 }
@@ -20,109 +18,153 @@ export function ProjectsSection() {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Caracterización Fantasía',
-      date: 'Enero 2025',
-      shortDescription: 'Proyecto de caracterización de criatura fantástica para cortometraje de género.',
-      fullDescription: 'Desarrollo completo de caracterización de criatura fantástica incluyendo diseño de prótesis faciales, aplicación de efectos especiales y maquillaje de degradado. El proyecto requirió un trabajo detallado de posticería y la coordinación con el departamento de arte para mantener la coherencia visual del personaje.',
-      duration: '3 semanas de preparación + 5 días de rodaje',
-      mainImage: 'https://images.unsplash.com/photo-1766878695518-d92624a70af6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFyYWN0ZXIlMjBtYWtldXAlMjBmYW50YXN5fGVufDF8fHx8MTc3MDIwNzYwNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: 'Caracterización',
+      date: '2024 - Actualidad',
+      shortDescription: 'Proyectos de caracterización',
+      fullDescription: 'En este apartado muestro algunos de los proyectos de caracterización que he ido realizando con el tiempo, donde aparecen heridas, hematomas, órganos y otros efectos creados de forma artesanal. Utilizando diferentes tecnicas y materiales, buscando que el resultado sea llamativo y encaje con la idea o la historia que hay detrás. Estos proyectos reflejan mi evolución, las pruebas que he ido haciendo y las ganas de seguir aprendiendo y mejorando, siempre cuidando los detalles y el impacto visual final.',
+      mainImage: 'images/Caracterizacion/Caracterizacion_main.jpeg',
       images: [
-        'https://images.unsplash.com/photo-1766878695518-d92624a70af6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFyYWN0ZXIlMjBtYWtldXAlMjBmYW50YXN5fGVufDF8fHx8MTc3MDIwNzYwNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        'https://images.unsplash.com/photo-1761589825963-0235617ce06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBhcnRpc3QlMjBzcGVjaWFsJTIwZWZmZWN0c3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        'https://images.unsplash.com/photo-1540360146783-1c3eb9be57e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9zdGhldGljJTIwbWFrZXVwJTIwc3BlY2lhbCUyMGVmZmVjdHN8ZW58MXx8fHwxNzcwMjA3NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+        'images/Caracterizacion/Caracterizacion_1.jpeg',
+        'images/Caracterizacion/Caracterizacion_2.jpeg',
+        'images/Caracterizacion/Caracterizacion_3.jpeg',
+        'images/Caracterizacion/Caracterizacion_4.jpeg',
+        'images/Caracterizacion/Caracterizacion_5.jpeg',
+        'images/Caracterizacion/Caracterizacion_6.jpeg',
+        'images/Caracterizacion/Caracterizacion_7.jpeg',
+        'images/Caracterizacion/Caracterizacion_8.jpeg',
+        'images/Caracterizacion/Caracterizacion_9.jpeg',
+        'images/Caracterizacion/Caracterizacion_10.jpeg',
+        'images/Caracterizacion/Caracterizacion_11.jpeg',
+        'images/Caracterizacion/Caracterizacion_12.jpeg',
+        'images/Caracterizacion/Caracterizacion_13.jpeg',
+        'images/Caracterizacion/Caracterizacion_14.jpeg',
+        'images/Caracterizacion/Caracterizacion_15.jpeg',
+        'images/Caracterizacion/Caracterizacion_16.jpeg',
       ]
     },
     {
       id: 2,
       title: 'Maquillaje de Época',
-      date: 'Diciembre 2024',
-      shortDescription: 'Recreación de look años 40 para producción de época.',
-      fullDescription: 'Investigación y recreación de estilos de maquillaje y peinado de los años 40. El proyecto incluyó estudio de documentación fotográfica de la época, creación de pruebas de maquillaje, y adaptación de técnicas modernas para lograr el aspecto auténtico requerido por la dirección artística. Se trabajó con un elenco de 8 actores principales.',
-      duration: '2 semanas de investigación + 2 semanas de rodaje',
-      mainImage: 'https://images.unsplash.com/photo-1629238135877-dae437cf0fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXAlMjBoYWlyJTIwc3R5bGluZ3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      date: '2023 - 2024',
+      shortDescription: 'Recreación de look años 20 y 40/50.',
+      fullDescription: 'Investigación y recreación de estilos de maquillaje y peinado de los años 20 y años 40. El proyecto incluyó estudio de documentación fotográfica de la época, creación de pruebas de maquillaje, y adaptación de técnicas modernas para lograr el aspecto auténtico requerido por la dirección artística.',
+      mainImage: 'images/Epoca/Epoca_main.jpeg',
       images: [
-        'https://images.unsplash.com/photo-1629238135877-dae437cf0fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXAlMjBoYWlyJTIwc3R5bGluZ3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        'https://images.unsplash.com/photo-1761589825963-0235617ce06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwbWFrZXVwJTIwYmVoaW5kJTIwc2NlbmVzfGVufDF8fHx8MTc3MDIwNzYwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+        'images/Epoca/Epoca_1.jpeg',
+        'images/Epoca/Epoca_2.jpeg',
+        'images/Epoca/Epoca_3.jpeg',
       ]
     },
     {
       id: 3,
-      title: 'Efectos Especiales - Heridas',
-      date: 'Noviembre 2024',
-      shortDescription: 'Creación de heridas realistas y efectos de sangre para escena de acción.',
-      fullDescription: 'Diseño y aplicación de efectos especiales de heridas, cortes y sangrado para secuencia de acción. El trabajo incluyó la fabricación de prótesis de silicona, aplicación de maquillaje de efectos especiales en continuidad durante varios días de rodaje, y coordinación con el equipo de efectos visuales para asegurar la integración de efectos prácticos y digitales.',
-      duration: '1 semana de preparación + 4 días de rodaje',
-      mainImage: 'https://images.unsplash.com/photo-1540360146783-1c3eb9be57e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9zdGhldGljJTIwbWFrZXVwJTIwc3BlY2lhbCUyMGVmZmVjdHN8ZW58MXx8fHwxNzcwMjA3NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: 'Envejecimiento',
+      date: '2023',
+      shortDescription: 'Envejecimiento facial.',
+      fullDescription: 'Envejecimiento facial realizado con latex y algodon.',
+      mainImage: 'images/Envejecimiento/envejez_2.jpg',
       images: [
-        'https://images.unsplash.com/photo-1540360146783-1c3eb9be57e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9zdGhldGljJTIwbWFrZXVwJTIwc3BlY2lhbCUyMGVmZmVjdHN8ZW58MXx8fHwxNzcwMjA3NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        'https://images.unsplash.com/photo-1761589825963-0235617ce06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBhcnRpc3QlMjBzcGVjaWFsJTIwZWZmZWN0c3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+        'images/Envejecimiento/Envejez_1.jpeg'
       ]
     },
     {
       id: 4,
-      title: 'Envejecimiento Progresivo',
-      date: 'Octubre 2024',
+      title: 'Fantasia',
+      date: '2025 - Actualidad',
       shortDescription: 'Caracterización de envejecimiento de 30 años para drama familiar.',
-      fullDescription: 'Desarrollo de caracterización progresiva mostrando el envejecimiento del personaje principal a lo largo de tres décadas. El proyecto requirió la creación de múltiples looks que mantuvieran la identidad del personaje mientras mostraban el paso del tiempo de manera creíble. Se utilizaron técnicas de maquillaje correctivo, aplicación de prótesis sutiles y diseño de peinado adaptado a cada época.',
-      duration: '3 semanas de diseño y pruebas + 10 días de rodaje',
-      mainImage: 'https://images.unsplash.com/photo-1761589825963-0235617ce06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwbWFrZXVwJTIwYmVoaW5kJTIwc2NlbmVzfGVufDF8fHx8MTc3MDIwNzYwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      fullDescription: 'Desarrollo de una caracterización de fantasía centrada en la creación de un personaje único, explorando diferentes looks y estilos a partir de una misma idea base. El proyecto se enfocó en mantener una identidad visual coherente mientras se experimentaba con colores, formas y elementos irreales. A lo largo del proceso se trabajó la evolución del personaje, cuidando los detalles y la armonía del conjunto para lograr un resultado creativo y visualmente impactante.',
+      mainImage: 'images/Fantasia/Fantasia_main.jpeg',
       images: [
-        'https://images.unsplash.com/photo-1761589825963-0235617ce06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaWxtJTIwbWFrZXVwJTIwYmVoaW5kJTIwc2NlbmVzfGVufDF8fHx8MTc3MDIwNzYwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        'https://images.unsplash.com/photo-1540360146783-1c3eb9be57e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9zdGhldGljJTIwbWFrZXVwJTIwc3BlY2lhbCUyMGVmZmVjdHN8ZW58MXx8fHwxNzcwMjA3NjA3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+        'images/Fantasia/Fantasia_1.jpeg',
+        'images/Fantasia/Fantasia_2.jpeg',
+        'images/Fantasia/Fantasia_3.jpeg',
+        'images/Fantasia/Fantasia_4.jpeg',
+        'images/Fantasia/Fantasia_5.jpeg',
       ]
     },
     {
       id: 5,
-      title: 'Maquillaje de Moda Editorial',
-      date: 'Septiembre 2024',
-      shortDescription: 'Colaboración en sesión fotográfica de moda con looks vanguardistas.',
-      fullDescription: 'Creación de looks de maquillaje artístico y avant-garde para sesión editorial. El proyecto exploró técnicas de maquillaje creativo, uso de pigmentos especiales, y diseño de conceptos visuales innovadores en colaboración con el fotógrafo y diseñador de vestuario. Se realizaron 5 looks diferentes con enfoques conceptuales distintos.',
-      duration: '1 semana de conceptualización + 2 días de shooting',
-      mainImage: 'https://images.unsplash.com/photo-1701163802894-99fa45f1c83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWtldXAlMjBhcnRpc3QlMjB3b21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MDIwNzYwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: 'Maquillaje Social',
+      date: '2023 - Actualidad',
+      shortDescription: 'Creación de maquillajes sociales.',
+      fullDescription: 'Desarrollo de maquillajes sociales pensados para realzar los rasgos naturales y adaptarse a diferentes ocasiones. Cada look se diseñó teniendo en cuenta el estilo personal, el tipo de evento y la armonía del conjunto, buscando un resultado favorecedor, elegante y acorde a cada persona.',
+      mainImage: 'images/Maquillaje_Social/Social_main.jpg',
       images: [
-        'https://images.unsplash.com/photo-1701163802894-99fa45f1c83e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYWtldXAlMjBhcnRpc3QlMjB3b21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc3MDIwNzYwNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        'https://images.unsplash.com/photo-1766878695518-d92624a70af6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFyYWN0ZXIlMjBtYWtldXAlMjBmYW50YXN5fGVufDF8fHx8MTc3MDIwNzYwNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+        'images/Maquillaje_Social/Social_1.jpeg',
+        'images/Maquillaje_Social/Social_2.jpeg',
+        'images/Maquillaje_Social/Social_3.jpeg',
+        'images/Maquillaje_Social/Social_4.jpeg',
+        'images/Maquillaje_Social/Social_5.jpeg',
+        'images/Maquillaje_Social/Social_6.jpeg',
+        'images/Maquillaje_Social/Social_7.jpeg',
       ]
     },
     {
       id: 6,
-      title: 'Posticería - Peluca de Época',
-      date: 'Agosto 2024',
-      shortDescription: 'Diseño y aplicación de peluca ventilada para personaje histórico.',
-      fullDescription: 'Proyecto de posticería completa incluyendo el diseño, ventilado manual y aplicación de peluca de época para personaje histórico del siglo XVIII. El trabajo incluyó investigación histórica detallada, selección de materiales apropiados, ventilado de la peluca mechón por mechón, y aplicación y peinado adaptado al estilo de la época. Se realizaron múltiples pruebas hasta lograr el resultado deseado por el director.',
-      duration: '4 semanas de fabricación + 1 semana de rodaje',
-      mainImage: 'https://images.unsplash.com/photo-1629238135877-dae437cf0fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXAlMjBoYWlyJTIwc3R5bGluZ3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: 'Modelado Protesis',
+      date: '2024 - Actualidad',
+      shortDescription: 'Desarrollo de prótesis modeladas',
+      fullDescription: 'Desarrollo de prótesis modeladas a mano para proyectos de caracterización, trabajando formas, volúmenes y texturas para lograr una integración natural con la piel. Cada pieza forma parte de un proceso creativo enfocado en el detalle y en conseguir un resultado visual creíble y expresivo.',
+      mainImage: 'images/Modelado_protesis/Modelado_main.jpeg',
       images: [
-        'https://images.unsplash.com/photo-1629238135877-dae437cf0fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXAlMjBoYWlyJTIwc3R5bGluZ3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        'https://images.unsplash.com/photo-1761589825963-0235617ce06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBhcnRpc3QlMjBzcGVjaWFsJTIwZWZmZWN0c3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+        'images/Modelado_protesis/Modelado_1.jpeg',
+        'images/Modelado_protesis/Modelado_2.jpeg',
+        'images/Modelado_protesis/Modelado_3.jpeg',
+        'images/Modelado_protesis/Modelado_4.jpeg',
+        'images/Modelado_protesis/Modelado_5.jpeg',
+        'images/Modelado_protesis/Modelado_6.jpeg',
+        'images/Modelado_protesis/Modelado_7.jpeg',
+        'images/Modelado_protesis/Modelado_8.jpeg',
+        'images/Modelado_protesis/Modelado_9.jpeg',
       ]
     },
     {
       id: 7,
-      title: 'Posticería - Peluca de Época',
-      date: 'Agosto 2024',
-      shortDescription: 'Diseño y aplicación de peluca ventilada para personaje histórico.',
-      fullDescription: 'Proyecto de posticería completa incluyendo el diseño, ventilado manual y aplicación de peluca de época para personaje histórico del siglo XVIII. El trabajo incluyó investigación histórica detallada, selección de materiales apropiados, ventilado de la peluca mechón por mechón, y aplicación y peinado adaptado al estilo de la época. Se realizaron múltiples pruebas hasta lograr el resultado deseado por el director.',
-      duration: '4 semanas de fabricación + 1 semana de rodaje',
-      mainImage: 'https://images.unsplash.com/photo-1629238135877-dae437cf0fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXAlMjBoYWlyJTIwc3R5bGluZ3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      title: 'Peluqueria',
+      date: '2022 - 2024',
+      shortDescription: 'Desarrollo de peinados y recogidos',
+      fullDescription: 'Desarrollo de trabajos de peluquería aplicados a caracterización y maquillaje, adaptando peinados y estilos a cada proyecto. Cada look se crea teniendo en cuenta la estética del personaje o la ocasión, cuidando la forma, el volumen y la coherencia.',
+      mainImage: 'images/Peluqueria/Peluqueria_main.jpg',
       images: [
-        'https://images.unsplash.com/photo-1629238135877-dae437cf0fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXAlMjBoYWlyJTIwc3R5bGluZ3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-        'https://images.unsplash.com/photo-1761589825963-0235617ce06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBhcnRpc3QlMjBzcGVjaWFsJTIwZWZmZWN0c3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+        'images/Peluqueria/Peluqueria_1.jpeg',
+        'images/Peluqueria/Peluqueria_2.jpeg',
+        'images/Peluqueria/Peluqueria_3.jpeg',
+        'images/Peluqueria/Peluqueria_4.jpeg',
+        'images/Peluqueria/Peluqueria_5.jpeg',
+        'images/Peluqueria/Peluqueria_6.jpeg',
+        'images/Peluqueria/Peluqueria_7.jpeg',
       ]
     },
-    // {
-    //   id: 8,
-    //   title: 'Posticería - Peluca de Época',
-    //   date: 'Agosto 2024',
-    //   shortDescription: 'Diseño y aplicación de peluca ventilada para personaje histórico.',
-    //   fullDescription: 'Proyecto de posticería completa incluyendo el diseño, ventilado manual y aplicación de peluca de época para personaje histórico del siglo XVIII. El trabajo incluyó investigación histórica detallada, selección de materiales apropiados, ventilado de la peluca mechón por mechón, y aplicación y peinado adaptado al estilo de la época. Se realizaron múltiples pruebas hasta lograr el resultado deseado por el director.',
-    //   duration: '4 semanas de fabricación + 1 semana de rodaje',
-    //   mainImage: 'https://images.unsplash.com/photo-1629238135877-dae437cf0fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXAlMjBoYWlyJTIwc3R5bGluZ3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    //   images: [
-    //     'https://images.unsplash.com/photo-1629238135877-dae437cf0fdf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmlkYWwlMjBtYWtldXAlMjBoYWlyJTIwc3R5bGluZ3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    //     'https://images.unsplash.com/photo-1761589825963-0235617ce06e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWtldXAlMjBhcnRpc3QlMjBzcGVjaWFsJTIwZWZmZWN0c3xlbnwxfHx8fDE3NzAyMDc2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
-    //   ]
-    // }
+    {
+      id: 8,
+      title: 'Shooting',
+      date: '2023',
+      shortDescription: 'Desarrollo de maquillajes en shootings',
+      fullDescription: 'Desarrollo de maquillajes y peinados para shootings, pensados para cámara y adaptados al concepto visual de cada sesión. Cada trabajo busca potenciar la imagen final, cuidando la luz, el estilo y la coherencia con el equipo creativo y el resultado fotográfico.',
+      mainImage: 'images/Shooting/Shooting_2.jpeg',
+      images: [
+        'images/Shooting/Shooting_1.jpeg',
+        'images/Shooting/Shooting_3.jpeg',
+        'images/Shooting/Shooting_4.jpeg',
+        'images/Shooting/Shooting_5.jpeg',
+        'images/Shooting/Shooting_6.jpeg',
+        'images/Shooting/Shooting_7.jpeg',
+      ]
+    },
+    {
+      id: 9,
+      title: 'Teatro',
+      date: '2025',
+      shortDescription: 'Caracterizacion de personajes en musicales',
+      fullDescription: 'Desarrollo de personajes de fantasia para obra musical infantil, utilizando la aplicacion de pelucas, postizos y maquillajes adaptados a cada uno de los personajes.',
+      mainImage: 'images/Teatro/teatro_main.jpg',
+      images: [
+        'images/Teatro/Musical_1.jpeg',
+        'images/Teatro/Musical_2.jpeg',
+        'images/Teatro/Musical_3.jpeg',
+        'images/Teatro/Musical_4.jpeg',
+        'images/Teatro/Musical_5.jpeg',
+      ]
+    }
   ];
 
   return (

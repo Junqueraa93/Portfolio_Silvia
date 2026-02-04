@@ -48,11 +48,11 @@ export function Footer() {
             </a>
           </div>
           
-          <div className="flex items-start gap-4 bg-white rounded-lg p-4 shadow-[0_0_15px_rgba(255,255,255,0.5)] max-w-md mx-auto mb-8 border border-[#d199cc]">
+          <div className="flex items-start gap-3 bg-white rounded-lg p-4 shadow-[0_0_15px_rgba(255,255,255,0.5)] max-w-md mx-auto mb-8 border border-[#d199cc]">
             <MapPin size={26} className="text-[#d199cc] flex-shrink-0 mt-1" />
             <div>
-              <p className= "text-center">Calle de Sondica, 1</p>
-              <p className= "text-center">28044 Madrid, España</p>
+              <p>Calle de Sondica, 1</p>
+              <p>28044 Madrid, España</p>
             </div>
           </div>
           

@@ -19,13 +19,18 @@ export function ExperienceSection() {
     },
     {
       icon: Film,
-      title: 'Cortometrajes con diferentes productoras',
-      description: 'He participado como maquilladora en varios cortometrajes con diferentes productoras. (Más adelante añadiré el nombre de las productoras y los nombres de los cortos)'
+      title: 'Cortometrajes con productoras',
+      description: 'He participado como maquilladora en varios cortometrajes con diferentes productoras. Trabajando con las productoras "NOMADA FILM ESTUDIOS" con el titulo "EL JUEGO DE LOS FALSOS", "PELICULAS DEL NIETO S.L" con el titulo "EST DEUS IN NOBIS" y "CLAQUETA BLANCA S.L" con el titulo de "TRISTES TIGRES"'
+    },
+    {
+      icon: Film,
+      title: 'Colaboracion en Cortometrajes',
+      description: 'He colaborado en mas de 6 cortometrajes a lo largo de estos años.'
     },
     {
       icon: Film,
       title: 'Largometrajes',
-      description: 'He participado como maquilladora en 1 películas. (Más adelante añadiré el nombre de las productoras y los nombres de las películas)'
+      description: 'He participado como maquilladora en 1 película. Colaborando con la escuela MADS bajo el titulo de "HATERNET"'
     },
     {
       icon: Theater,

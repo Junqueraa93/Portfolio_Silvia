@@ -22,7 +22,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-[0_0_40px_rgba(209,153,204,0.8)] border border-[#d199cc] modal-scrollbar"
+        className="bg-white rounded-2xl max-w-4xl min-w-[130px] w-full max-h-[90vh] overflow-y-auto shadow-[0_0_40px_rgba(209,153,204,0.8)] border border-[#d199cc] modal-scrollbar"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex justify-between items-center">
@@ -41,7 +41,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
         <div className="p-6 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {project.images.map((image, index) => (
-              <div key={index} className="aspect-[4/3] overflow-hidden rounded-lg">
+              <div key={index} className="aspect-[3/4] overflow-hidden rounded-lg">
                 <ImageWithFallback
                   src={image}
                   alt={`${project.title} - Imagen ${index + 1}`}
@@ -58,14 +58,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
               </h3>
               <p>{project.date}</p>
             </div>
-            
-            <div>
-              <h3 className="text-lg mb-2">
-                Duración del proyecto
-              </h3>
-              <p>{project.duration}</p>
-            </div>
-            
+                        
             <div>
               <h3 className="text-lg mb-2">
                 Descripción
